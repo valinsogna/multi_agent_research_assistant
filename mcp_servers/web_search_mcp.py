@@ -18,7 +18,7 @@ from enum import Enum
 from mcp.server.fastmcp import FastMCP
 from pydantic import BaseModel, Field, ConfigDict
 import httpx
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 
 # =============================================================================
 # Server Initialization

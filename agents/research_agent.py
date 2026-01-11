@@ -97,7 +97,7 @@ class ResearchAgent(BaseAgent):
     
     async def _web_search(self, query: str, max_results: int = 10) -> List[Dict]:
         """Esegue ricerca web via DuckDuckGo."""
-        from duckduckgo_search import DDGS
+        from ddgs import DDGS
         
         try:
             with DDGS() as ddgs:
@@ -109,7 +109,7 @@ class ResearchAgent(BaseAgent):
     
     async def _news_search(self, query: str, max_results: int = 10, timelimit: str = "w") -> List[Dict]:
         """Cerca news recenti."""
-        from duckduckgo_search import DDGS
+        from ddgs import DDGS
         
         try:
             with DDGS() as ddgs:
