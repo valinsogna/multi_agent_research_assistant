@@ -23,3 +23,12 @@ It uses DuckDuckGo because it's free and doesn't require API keys.
 The parameters are conservative - maximum 5 results per query, 15 seconds timeout - to balance completeness and speed.
 Optionally it can do 'deep search' by downloading full content of the most relevant pages.
 At the end, it passes everything to the LLM for initial quality analysis.
+
+## Q4: How is data truncation handled to protect the context window?
+
+In the system, data flows through a shared state called WorkflowState, following a blackboard pattern. Each agent reads what it needs and writes its output.
+Regarding context window protection, truncation happens at two points:
+- **Research Agent** searches DuckDuckGo and saves the complete results in the state - snippets are typically 300-500 characters. However, when it performs its internal preliminary analysis, it truncates snippets to 200 characters and uses only the first 5 results. This preliminary analysis is just to get an initial confidence score.
+- **Analysis Agent** receives the complete results, but when it prepares the context for the LLM, it applies truncation again: it takes only 5 web results, truncates snippets to 200 characters, takes only 3 news items, and limits deep content to 1000 characters per page.
+This approach has some redundancy - both agents truncate - but it's a deliberate choice for safety: each agent is responsible for controlling the size of its own context before calling the LLM. This way, even if I were to modify the Research Agent in the future to save more data, the Analysis Agent would still be protected.
+The final result is a context of approximately 800-1000 tokens per LLM call, which is compatible even with small models like Llama 3.2 3B that only has a 4K context window. In total, the workflow makes 4 LLM calls - one for Research, one for Analysis, two for Synthesis - and none of these exceeds 2000 input tokens.
