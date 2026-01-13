@@ -24,7 +24,7 @@ for dir_path in [DATA_DIR, OUTPUT_DIR, CACHE_DIR]:
 
 # Modello Ollama da usare (cambia in base a cosa hai scaricato)
 # Opzioni: "deepseek-r1:7b", "llama3.2:3b", "qwen2.5:7b", "mistral:7b"
-OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "llama3.2:3b")
+OLLAMA_MODEL: str = os.getenv("OLLAMA_MODEL", "deepseek-r1:7b")
 
 # URL del server Ollama
 OLLAMA_BASE_URL: str = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
