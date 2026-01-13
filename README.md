@@ -63,17 +63,17 @@ USER INPUT: "AI nel settore bancario"
 ┌─────────────────────────────────────────────────────────────────────────┐
 │ RESEARCH AGENT                                                          │
 │                                                                         │
-│ • Genera 3 varianti query                                               │
-│ • Web search: 2 query × 5 risultati = 10 totali                        │
-│ • News search: 5 risultati (ultima settimana)                          │
-│ • 1 chiamata LLM per analisi preliminare                               │
+│ • Genera 3 varianti query: 2 di default e 1 opzionale.                  │    
+│ • Web search: 2 query di default × 5 risultati = 10 totali              │
+│ • News search: 5 risultati (ultima settimana)                           │
+│ • 1 chiamata LLM per analisi preliminare                                │
 │                                                                         │
-│ OUTPUT: ~10 web results + 5 news + analisi preliminare                 │
+│ OUTPUT: ~10 web results + 5 news + analisi preliminare                  │
 └─────────────────────────────────────────────────────────────────────────┘
                     │
                     │  ⚠️ TRONCAMENTO (protezione context window)
                     │  • Max 5 web results (di 10)
-                    │  • Max 200 char per snippet
+                    │  • Max 200 char per fonte
                     │  • Max 3 news (di 5)
                     │  • TOTALE: ~3000 char (~800 token)
                     ▼
