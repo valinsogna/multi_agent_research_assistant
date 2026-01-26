@@ -37,8 +37,8 @@ def print_banner():
     ║                                                               ║
     ║   🏦  FINANCIAL RESEARCH ASSISTANT                            ║
     ║                                                               ║
-    ║   Multi-Agent System con MCP + A2A                            ║
-    ║   Demo                ║
+    ║   Multi-Agent System con MCP                                  ║
+    ║   Demo                                                        ║
     ║                                                               ║
     ╚═══════════════════════════════════════════════════════════════╝
     """
@@ -72,7 +72,7 @@ async def demo_basic_research():
     ))
     
     result = await run_research(
-        query="Intelligenza artificiale settore bancario Italia 2024",
+        query="Intelligenza artificiale settore bancario Italia 2026",
         include_news=True,
         deep_search=False,
         output_format="markdown"
@@ -91,7 +91,7 @@ async def demo_market_analysis():
     ))
     
     result = await run_research(
-        query="Fintech digital banking trends Europe 2024",
+        query="Fintech digital banking trends Europe 2026",
         include_news=True,
         deep_search=True,  # Più approfondito
         output_format="html"

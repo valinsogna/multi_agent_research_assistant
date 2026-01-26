@@ -69,7 +69,7 @@ class WorkflowState(TypedDict, total=False):
     del grafo LangGraph. Ogni agente può leggere e modificare
     parti specifiche di questo stato.
     
-    Pattern A2A: Lo stato funge da "lavagna condivisa" dove
+    Pattern blackboard: Lo stato funge da "lavagna condivisa" dove
     gli agenti depositano i loro risultati e leggono quelli
     degli altri.
     """

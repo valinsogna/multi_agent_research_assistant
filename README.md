@@ -1,6 +1,6 @@
 # 🔬 Multi-Agent Research Assistant
 
-Un sistema multi-agente con protoclli **MCP** (Model Context Protocol) e **A2A** (Agent-to-Agent) per eseguire ricerche web, analizzare documenti e generare report sintetici usando modelli di linguaggio locali (es. DeepSeek via Ollama).
+Un sistema multi-agente con protoclli **MCP** (Model Context Protocol) per eseguire ricerche web, analizzare documenti e generare report sintetici usando modelli di linguaggio locali (es. DeepSeek via Ollama).
 
 ## 🎯 Technolgie
 
