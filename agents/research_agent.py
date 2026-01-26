@@ -171,7 +171,7 @@ class ResearchAgent(BaseAgent):
         # Genera query
         queries = [
             topic,
-            f"{topic} 2024",
+            f"{topic} 2026",
             f"{topic} analisi"
         ]
         results["queries_used"] = queries

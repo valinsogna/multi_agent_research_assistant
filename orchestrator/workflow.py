@@ -403,7 +403,7 @@ class ResearchOrchestrator:
     
     Esempio d'uso:
         orchestrator = ResearchOrchestrator()
-        result = await orchestrator.run("AI in banking 2024")
+        result = await orchestrator.run("AI in banking 2026")
     """
     
     def __init__(self):

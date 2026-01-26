@@ -131,7 +131,7 @@ INPUT:  "AI nel settore bancario Italia"
 │                                     │
 │  1. Query generate:                 │
 │     • "AI settore bancario Italia"  │
-│     • "AI settore bancario 2024"    │
+│     • "AI settore bancario 2026"    │
 │     • "AI settore bancario analisi" │
 │                                     │
 │  2. Web search (DuckDuckGo)         │
